@@ -1,0 +1,104 @@
+@import '../../app.scss';
+// @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400&family=Montserrat:wght@300;400&family=Poppins:wght@300;500;900&display=swap');
+
+
+.Client{
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+
+    h1{
+        font-size: 5rem;
+
+        @include mobile{
+            font-size: 3rem;
+            width: 100vw;
+            text-align: center;
+            margin-top: 6rem;
+        }
+        
+    }
+
+    .carousel{
+        height: 70vh;
+        width: 70vw;
+        // background-color: red;
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+
+        @include mobile{
+            width: 100vw;
+            
+        }
+
+        .main{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @include mobile{
+                margin-top: 1rem;
+            }
+
+            .imageDiv{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    height: 30vh;
+                    width: 30vh;
+                    border-radius: 50%;
+
+                    @include mobile{
+                        height: 20vh;
+                        width: 20vh;
+                    }
+
+                    // object-fit: cover;
+                }
+            }
+
+            .contentDiv{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .contentDiv{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+
+            h2{
+                font-weight: 500;
+            }
+
+            p{
+                @include mobile{
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+.rec.rec-arrow{
+    color: orange;
+}
+
+button.rec-dot{
+    visibility: hidden;
+}
